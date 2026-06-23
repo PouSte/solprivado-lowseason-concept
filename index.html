@@ -4,13 +4,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- ===== SEO ===== -->
 <title>Winter in Murcia — Escape the Cold | Villa Adela by Sol Privado</title>
 <meta name="description" content="Escape the cold this winter at Villa Adela, a luxury villa on the Costa Cálida near Mar Menor. Golf escapes, long winter-sun stays and workations from November to March. Heated pool, jacuzzis, fast fibre and 300 days of sun." />
 <meta property="og:title" content="Winter in Murcia — Escape the Cold | Villa Adela" />
 <meta property="og:description" content="Luxury winter-sun villa on the Costa Cálida. Golf escapes, long stays and workations near Mar Menor, Murcia." />
 <meta property="og:type" content="website" />
-<meta name="robots" content="noindex" /> <!-- concept: niet door Google laten indexeren -->
+<meta name="robots" content="noindex" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,11 +21,7 @@
     --terracotta:#C0561E; --terracotta-dk:#A84814;
     --gold:#BFA07D; --cream:#FBE7DB; --cream-soft:#FDF2EA;
     --paper:#FFFBF7; --ink:#26333F; --muted:#5C6770;
-
-    /* === HERO PHOTO ===
-       Replace none with your dusk-pool photo URL, e.g.
-       --hero-image: url('https://solprivado.com/wp-content/uploads/villa-dusk.jpg'); */
-    --hero-image: none;
+    --hero-image: url('hero.jpeg');
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -35,26 +30,17 @@
   p{font-weight:300;font-size:1.05rem;color:var(--muted)}
   .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
   .rule{display:inline-block;width:64px;height:3px;background:var(--terracotta);margin:18px 0 24px;border-radius:2px}
-  .eyebrow{font-family:'Lato',sans-serif;font-weight:700;letter-spacing:.22em;text-transform:uppercase;font-size:.72rem;color:var(--terracotta)}
+  .eyebrow{font-weight:700;letter-spacing:.22em;text-transform:uppercase;font-size:.72rem;color:var(--terracotta)}
   section{padding:84px 0}
   .section-head{max-width:60ch}
   .section-head h2{font-size:clamp(2rem,4.4vw,3rem)}
   .section-head p{margin-top:6px;font-size:1.12rem}
 
-  /* ===== PHOTO SLOT (replace with <img> in WordPress) ===== */
-  .photo-slot{
-    background:
-      repeating-linear-gradient(45deg,var(--cream) 0 14px,#F6DECF 14px 28px);
-    border:1.5px dashed var(--gold);
-    border-radius:6px;display:flex;flex-direction:column;
-    align-items:center;justify-content:center;text-align:center;
-    color:var(--navy);padding:24px;min-height:220px;
-  }
-  .photo-slot .ps-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700}
-  .photo-slot .ps-sub{font-size:.82rem;color:var(--muted);margin-top:6px;max-width:30ch}
-  .photo-slot::before{content:"◇";font-size:1.4rem;color:var(--gold);margin-bottom:8px}
+  /* media */
+  .media{border-radius:6px;overflow:hidden;aspect-ratio:4/3}
+  .media img{width:100%;height:100%;object-fit:cover;display:block}
 
-  /* ===== BUTTONS ===== */
+  /* buttons */
   .btn{display:inline-block;font-weight:700;font-size:.95rem;letter-spacing:.02em;padding:15px 30px;border-radius:2px;text-decoration:none;transition:.25s ease}
   .btn-primary{background:var(--terracotta);color:#fff}
   .btn-primary:hover{background:var(--terracotta-dk);transform:translateY(-2px)}
@@ -62,36 +48,34 @@
   .btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}
   .cta-row{display:flex;flex-wrap:wrap;gap:14px}
 
-  /* ===== HERO ===== */
-  .hero{position:relative;min-height:86vh;display:flex;align-items:center;color:#fff;
-    background:linear-gradient(180deg,rgba(22,41,58,.55),rgba(22,41,58,.8)),var(--hero-image,none),
-      radial-gradient(120% 90% at 70% 10%,#2C5170,#1E3A52 45%,#16293A 100%);
+  /* hero */
+  .hero{position:relative;min-height:88vh;display:flex;align-items:center;color:#fff;
+    background:linear-gradient(180deg,rgba(22,41,58,.45),rgba(22,41,58,.82)),var(--hero-image),#16293A;
     background-size:cover;background-position:center}
-  .hero .wrap{padding:96px 28px 80px}
+  .hero .wrap{padding:96px 28px 90px}
   .hero .eyebrow{color:var(--gold)}
   .hero h1{color:#fff;font-size:clamp(2.7rem,7vw,5rem);font-weight:800;max-width:14ch;margin-top:14px}
   .hero h1 em{font-style:italic;font-weight:600;color:var(--gold)}
-  .hero .lead{color:rgba(255,255,255,.92);font-size:clamp(1.05rem,2.2vw,1.3rem);max-width:46ch;margin:22px 0 34px;font-weight:300}
-  .hero-hint{position:absolute;top:18px;left:50%;transform:translateX(-50%);font-size:.72rem;letter-spacing:.06em;color:rgba(255,255,255,.6);border:1px dashed rgba(255,255,255,.3);padding:5px 12px;border-radius:20px}
+  .hero .lead{color:rgba(255,255,255,.92);font-size:clamp(1.05rem,2.2vw,1.3rem);max-width:48ch;margin:22px 0 34px;font-weight:300}
   .hero-bar{position:absolute;left:0;right:0;bottom:0;background:var(--navy-deep);border-top:3px solid var(--terracotta)}
   .hero-bar ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;max-width:1120px;margin:0 auto;padding:16px 28px}
   .hero-bar li{color:#fff;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;padding:6px 26px;border-right:1px solid rgba(255,255,255,.18)}
   .hero-bar li:last-child{border-right:none}
 
-  /* ===== WHY (text + photo) ===== */
+  /* why */
   .why{background:var(--cream)}
   .split{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
   .stats{display:flex;gap:30px;margin-top:26px;flex-wrap:wrap}
   .stat .num{font-family:'Playfair Display',serif;font-size:2.1rem;font-weight:700;color:var(--navy);line-height:1}
   .stat .lab{font-size:.85rem;color:var(--muted);display:block;margin-top:4px}
 
-  /* ===== PACKAGES ===== */
+  /* packages */
   .packages{background:var(--paper)}
-  /* Golf feature row leads */
-  .feature{display:grid;grid-template-columns:1.05fr 1fr;gap:46px;align-items:center;margin-top:50px;
+  .feature{display:grid;grid-template-columns:1.05fr 1fr;gap:0;align-items:stretch;margin-top:50px;
     background:var(--cream-soft);border:1px solid #F0DCCF;border-radius:8px;overflow:hidden}
-  .feature .photo-slot{min-height:340px;border:none;border-radius:0;border-right:1.5px dashed var(--gold)}
-  .feature .ft-body{padding:44px 44px 44px 0}
+  .ft-media{min-height:340px}
+  .ft-media img{width:100%;height:100%;object-fit:cover;display:block}
+  .feature .ft-body{padding:44px}
   .feature .tag{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--terracotta)}
   .feature h3{font-size:2rem;margin-top:8px}
   .feature .season{font-size:.85rem;color:var(--gold);font-weight:700;margin-top:6px;display:block}
@@ -101,8 +85,11 @@
   .feature li::before,.pkg li::before{content:"";position:absolute;left:0;top:14px;width:8px;height:8px;background:var(--terracotta);border-radius:50%}
 
   .pkg-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:26px}
-  .pkg{background:var(--cream-soft);border:1px solid #F0DCCF;border-radius:8px;padding:36px 32px;display:flex;flex-direction:column;transition:.3s ease}
+  .pkg{background:var(--cream-soft);border:1px solid #F0DCCF;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;transition:.3s ease}
   .pkg:hover{transform:translateY(-5px);box-shadow:0 18px 40px -22px rgba(30,58,82,.45)}
+  .pkg .pkg-media{aspect-ratio:16/10}
+  .pkg .pkg-media img{width:100%;height:100%;object-fit:cover;display:block}
+  .pkg .pkg-body{padding:30px 32px 36px;display:flex;flex-direction:column}
   .pkg .tag{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--terracotta)}
   .pkg h3{font-size:1.5rem;margin-top:10px}
   .pkg .season{font-size:.85rem;color:var(--gold);font-weight:700;margin-top:6px;display:block}
@@ -111,7 +98,7 @@
   .pkg p{font-size:.97rem;margin-top:14px}
   .pkg ul{list-style:none;margin-top:14px}
 
-  /* ===== SOCIAL PROOF ===== */
+  /* proof */
   .proof{background:var(--cream)}
   .score{display:flex;align-items:baseline;gap:14px;margin-top:20px}
   .score .big{font-family:'Playfair Display',serif;font-size:2.6rem;color:var(--navy);font-weight:700}
@@ -123,26 +110,23 @@
   .review .who{font-size:.85rem;color:var(--muted);margin-top:14px;font-weight:700;font-style:normal}
   .ph-tag{display:inline-block;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--terracotta);border:1px solid var(--gold);border-radius:3px;padding:2px 7px;margin-top:14px}
 
-  /* ===== INCLUDED ===== */
+  /* included */
   .included{background:var(--navy);color:#fff}
   .included h2{color:#fff}.included .section-head p{color:rgba(255,255,255,.8)}
   .inc-wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;margin-top:44px}
-  .inc-wrap .photo-slot{background:repeating-linear-gradient(45deg,#21425c 0 14px,#1b3850 14px 28px);border-color:rgba(191,160,125,.55);color:#fff;min-height:320px}
-  .inc-wrap .photo-slot .ps-sub{color:rgba(255,255,255,.7)}
   .inc-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 26px}
   .inc{display:flex;align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.12)}
   .inc .dot{width:7px;height:7px;background:var(--gold);border-radius:50%;flex:none;transform:translateY(-2px)}
   .inc span{color:#EAF0F4;font-weight:300;font-size:.98rem}
 
-  /* ===== AREA ===== */
+  /* area */
   .area{background:var(--paper)}
-  .area .split{gap:54px}
   .facts{list-style:none;margin-top:24px}
   .facts li{padding:14px 0;border-bottom:1px solid #EFD9C9;display:flex;gap:14px;align-items:baseline}
-  .facts b{font-family:'Lato';color:var(--navy);font-weight:700;min-width:120px;display:inline-block}
+  .facts b{color:var(--navy);font-weight:700;min-width:120px;display:inline-block}
   .facts span{color:var(--muted);font-weight:300;font-size:.98rem}
 
-  /* ===== CLOSING ===== */
+  /* closing */
   .closing{background:var(--navy-deep);color:#fff;text-align:center;border-top:3px solid var(--terracotta)}
   .closing h2{color:#fff;font-size:clamp(2rem,4.6vw,3rem);max-width:18ch;margin:0 auto}
   .closing h2 em{font-style:italic;color:var(--gold)}
@@ -158,8 +142,7 @@
 
   @media(max-width:880px){
     .split,.feature,.pkg-grid,.inc-wrap{grid-template-columns:1fr}
-    .feature .ft-body{padding:0 32px 36px}
-    .feature .photo-slot{border-right:none;border-bottom:1.5px dashed var(--gold)}
+    .ft-media{min-height:240px}
     .reviews{grid-template-columns:1fr}
     .hero-bar li{border-right:none;padding:4px 16px}
   }
@@ -168,15 +151,14 @@
 </head>
 <body>
 
-  <!-- ===== HERO ===== -->
+  <!-- HERO -->
   <header class="hero">
-    <span class="hero-hint">◇ Hero-foto: villa bij avond, verlicht zwembad — zet de URL in --hero-image</span>
     <div class="wrap reveal">
       <span class="eyebrow">Costa Cálida · Murcia, Spain</span>
       <h1>Winter in Murcia — <em>escape the cold</em></h1>
-      <p class="lead">While the north turns grey, the Costa Cálida stays warm. Settle into Villa Adela for a week, a month or a whole winter season — heated pool, private jacuzzis and 300 days of sun a year.</p>
+      <p class="lead">When the north turns grey, the Costa Cálida stays warm. Make Villa Adela your winter — a week, a month, or the whole season — with a heated pool, two jacuzzis and sun almost every day.</p>
       <div class="cta-row">
-        <!-- Deep-link this to your booking/availability page, not the homepage -->
+        <!-- Deep-link to your booking/availability page -->
         <a class="btn btn-primary" href="https://solprivado.com">Check winter availability</a>
         <a class="btn btn-ghost" href="#stays">See winter stays</a>
       </div>
@@ -189,52 +171,46 @@
     </div>
   </header>
 
-  <!-- ===== WHY WINTER ===== -->
+  <!-- WHY WINTER -->
   <section class="why">
     <div class="wrap split">
       <div class="reveal">
         <span class="eyebrow">Why the Costa Cálida</span>
         <h2>The mild side of a Spanish winter</h2>
         <span class="rule"></span>
-        <p>Murcia's coast is one of the warmest corners of mainland Europe between November and March. Bright, dry days, gentle evenings and a villa built for year-round comfort — not a place that simply waits for summer.</p>
+        <p>Between November and March, this is one of the warmest corners of mainland Europe. Dry, bright days; soft evenings; and a villa designed for comfort in every season — not one that waits for summer.</p>
         <div class="stats">
           <div class="stat"><span class="num">~300</span><span class="lab">days of sun a year</span></div>
           <div class="stat"><span class="num">~18°C</span><span class="lab">typical winter high</span></div>
           <div class="stat"><span class="num">800 m</span><span class="lab">from the beach</span></div>
         </div>
       </div>
-      <div class="photo-slot reveal" style="aspect-ratio:4/3">
-        <span class="ps-title">Foto: rooftop jacuzzi overdag</span>
-        <span class="ps-sub">Daglicht-shot van het dakterras met jacuzzi en zon</span>
-      </div>
+      <div class="media reveal"><img src="rooftop-sun.jpeg" alt="Sunlit rooftop terrace with pergola at Villa Adela, Murcia" /></div>
     </div>
   </section>
 
-  <!-- ===== PACKAGES ===== -->
+  <!-- PACKAGES -->
   <section class="packages" id="stays">
     <div class="wrap">
       <div class="section-head reveal">
         <span class="eyebrow">Three ways to winter here</span>
         <h2>Choose your kind of stay</h2>
         <span class="rule"></span>
-        <p>Whether you come to play, to slow down or to keep working in the sun, Villa Adela adapts to the length and rhythm of your winter.</p>
+        <p>Come to play, to slow down, or to keep working in the sun. Villa Adela bends to the length and rhythm of your winter.</p>
       </div>
 
-      <!-- GOLF leads (priority 1) -->
+      <!-- GOLF leads -->
       <div class="feature reveal">
-        <div class="photo-slot">
-          <span class="ps-title">Foto: golfer op de green</span>
-          <span class="ps-sub">Rechtenvrij (Unsplash/Pexels). Zoek op: "golfer tee off sunny" of "golf course Spain". Liefst zonnig, afslag of green.</span>
-        </div>
+        <div class="ft-media"><img src="golf.jpeg" alt="Golfer teeing off on a sunny course near the Mar Menor, Murcia" /></div>
         <div class="ft-body">
           <span class="tag">Golf Escape · most popular</span>
           <h3>Tee off in the sun</h3>
           <span class="season">November – March</span>
-          <p>Some of the region's best courses sit within easy reach — Roda, La Serena, Los Alcázares and the wider Mar Menor circuit. Base yourself at the villa and play through the mild season.</p>
+          <p>The region's best courses sit on your doorstep — Roda, La Serena, Los Alcázares and the wider Mar Menor circuit. Base yourself at the villa and play right through the mild season.</p>
           <ul>
             <li>Stays of 7, 14 or 28 nights</li>
             <li>Minutes from multiple Murcia courses</li>
-            <li>Room for groups of up to 8 players</li>
+            <li>Room for a group of up to 8 players</li>
             <li>Course guidance on request</li>
           </ul>
         </div>
@@ -242,78 +218,66 @@
 
       <div class="pkg-grid">
         <div class="pkg reveal">
-          <span class="tag">Winter Sun Monthly Stay</span>
-          <h3>Trade winter for warmth</h3>
-          <span class="season">November – February</span>
-          <div class="anchor">from €3,500 <span>/ month</span></div>
-          <p>For overwinterers who want sun without the upkeep of owning. Move in for a month or more and let the villa become your seasonal home on the coast.</p>
-          <ul>
-            <li>Monthly stays from 28 nights</li>
-            <li>Fully furnished, move-in ready</li>
-            <li>Heated pool &amp; jacuzzi included</li>
-            <li>Utilities billed transparently</li>
-          </ul>
+          <div class="pkg-media"><img src="interior.jpeg" alt="Bright open-plan living room and kitchen at Villa Adela" /></div>
+          <div class="pkg-body">
+            <span class="tag">Winter Sun Monthly Stay</span>
+            <h3>Trade winter for warmth</h3>
+            <span class="season">November – February</span>
+            <div class="anchor">from €3,500 <span>/ month</span></div>
+            <p>Sun without the upkeep of owning. Move in for a month or more and let the villa become your seasonal home on the coast.</p>
+            <ul>
+              <li>Monthly stays from 28 nights</li>
+              <li>Fully furnished, move-in ready</li>
+              <li>Heated pool &amp; jacuzzi included</li>
+              <li>Utilities billed transparently</li>
+            </ul>
+          </div>
         </div>
         <div class="pkg reveal">
-          <span class="tag">Workation</span>
-          <h3>Work where it's warm</h3>
-          <span class="season">October – March</span>
-          <div class="anchor">weekly &amp; monthly rates</div>
-          <p>Built for founders, consultants and remote teams who'd rather log in from a sunlit terrace. Fast fibre, quiet surroundings and everything you need to stay productive.</p>
-          <ul>
-            <li>Fast fibre internet throughout</li>
-            <li>Private pool &amp; rooftop terrace</li>
-            <li>Quiet residential setting</li>
-            <li>Ideal for 1–8 people</li>
-          </ul>
+          <div class="pkg-media"><img src="workation.jpeg" alt="Rooftop terrace with dining table, ideal for a workation in Murcia" /></div>
+          <div class="pkg-body">
+            <span class="tag">Workation</span>
+            <h3>Work where it's warm</h3>
+            <span class="season">October – March</span>
+            <div class="anchor">weekly &amp; monthly rates</div>
+            <p>For founders, consultants and remote teams who'd rather log in from a sunlit terrace. Fast fibre, quiet streets, everything in place to stay productive.</p>
+            <ul>
+              <li>Fast fibre internet throughout</li>
+              <li>Private pool &amp; rooftop terrace</li>
+              <li>Quiet residential setting</li>
+              <li>Ideal for 1–8 people</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== SOCIAL PROOF ===== -->
+  <!-- SOCIAL PROOF -->
   <section class="proof">
     <div class="wrap">
       <div class="section-head reveal">
         <span class="eyebrow">Guests on Villa Adela</span>
-        <h2>Loved by the people who stay</h2>
+        <h2>Loved by the guests who stay</h2>
         <span class="rule"></span>
         <div class="score">
           <span class="big">9.6</span>
-          <div><span class="stars">★★★★★</span><br><span style="font-size:.85rem;color:var(--muted)">Vervang met je echte Booking.com- / gemiddelde score</span></div>
+          <div><span class="stars">★★★★★</span><br><span style="font-size:.85rem;color:var(--muted)">Vervang met je echte gemiddelde score</span></div>
         </div>
       </div>
-      <!-- Replace the three quotes below with REAL guest reviews (Booking.com, e-mail, Vrbo) -->
+      <!-- Replace the three quotes with REAL guest reviews -->
       <div class="reviews reveal">
-        <div class="review">
-          <span class="stars">★★★★★</span>
-          <p>"Spotless, stylish and the rooftop terrace at sunset is unforgettable. We came in winter and barely needed a jacket."</p>
-          <span class="who">— Voorbeeld, NL</span>
-          <span class="ph-tag">voorbeeld · vervangen door echte review</span>
-        </div>
-        <div class="review">
-          <span class="stars">★★★★★</span>
-          <p>"Perfect base for a golf week. Courses minutes away and the villa felt like a five-star home."</p>
-          <span class="who">— Voorbeeld, UK</span>
-          <span class="ph-tag">voorbeeld · vervangen door echte review</span>
-        </div>
-        <div class="review">
-          <span class="stars">★★★★★</span>
-          <p>"Stayed a month to escape the cold. Fast wi-fi, heated pool, quiet street — we didn't want to leave."</p>
-          <span class="who">— Voorbeeld, DE</span>
-          <span class="ph-tag">voorbeeld · vervangen door echte review</span>
-        </div>
+        <div class="review"><span class="stars">★★★★★</span><p>"Spotless, stylish and the rooftop terrace at sunset is unforgettable. We came in winter and barely needed a jacket."</p><span class="who">— Voorbeeld, NL</span><span class="ph-tag">voorbeeld · vervangen</span></div>
+        <div class="review"><span class="stars">★★★★★</span><p>"Perfect base for a golf week. Courses minutes away and the villa felt like a five-star home."</p><span class="who">— Voorbeeld, UK</span><span class="ph-tag">voorbeeld · vervangen</span></div>
+        <div class="review"><span class="stars">★★★★★</span><p>"Stayed a month to escape the cold. Fast wi-fi, heated pool, quiet street — we didn't want to leave."</p><span class="who">— Voorbeeld, DE</span><span class="ph-tag">voorbeeld · vervangen</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== INCLUDED ===== -->
+  <!-- INCLUDED -->
   <section class="included">
     <div class="wrap inc-wrap">
-      <div class="photo-slot reveal">
-        <span class="ps-title">Foto: master suite of designkeuken</span>
-        <span class="ps-sub">Interieur-shot dat de luxe binnen laat zien</span>
-      </div>
+      <div class="media reveal"><img src="pool-night.jpeg" alt="Villa Adela at night with illuminated pool and jacuzzi" /></div>
       <div class="reveal">
         <span class="eyebrow">Comfort, all winter</span>
         <h2>Everything ready when you arrive</h2>
@@ -334,14 +298,14 @@
     </div>
   </section>
 
-  <!-- ===== THE AREA IN WINTER ===== -->
+  <!-- AREA -->
   <section class="area">
     <div class="wrap split">
       <div class="reveal">
         <span class="eyebrow">Around the villa</span>
         <h2>The Mar Menor in winter</h2>
         <span class="rule"></span>
-        <p>Santiago de la Ribera sits on the Mar Menor — a calm, shallow sea lagoon with promenades, marinas and year-round restaurants. Quiet in winter, but never closed.</p>
+        <p>Santiago de la Ribera sits on the Mar Menor — a calm, shallow sea lagoon with promenades, marinas and restaurants that stay open year-round. Quiet in winter, but never closed.</p>
         <ul class="facts">
           <li><b>Beach</b><span>800 m — Mar Menor promenade</span></li>
           <li><b>Golf</b><span>Roda, La Serena, Los Alcázares within ~15 min</span></li>
@@ -349,14 +313,11 @@
           <li><b>Daily life</b><span>Supermarkets, pharmacies &amp; restaurants nearby</span></li>
         </ul>
       </div>
-      <div class="photo-slot reveal" style="aspect-ratio:4/3">
-        <span class="ps-title">Foto: Mar Menor / strand of haven</span>
-        <span class="ps-sub">Zonnige omgevingsfoto — promenade, water of marina</span>
-      </div>
+      <div class="media reveal"><img src="rooftop-sun.jpeg" alt="Sunny terrace view over the Mar Menor area in Murcia" /></div>
     </div>
   </section>
 
-  <!-- ===== CLOSING CTA ===== -->
+  <!-- CLOSING -->
   <section class="closing">
     <div class="wrap reveal">
       <h2>Spend this winter <em>in the sun</em></h2>
