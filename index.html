@@ -335,5 +335,209 @@
     const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   </script>
+  <section class="va-faq" aria-labelledby="va-faq-title">
+  <style>
+    .va-faq{
+      --va-navy:#1E3A52;
+      --va-terracotta:#C0561E;
+      --va-gold:#BFA07D;
+      --va-cream:#FBE7DB;
+      --va-ink:#3b3b3b;
+      background:var(--va-cream);
+      padding:clamp(3rem,7vw,5.5rem) clamp(1.25rem,5vw,2rem);
+      font-family:'Lato',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+      color:var(--va-ink);
+    }
+    .va-faq__inner{ max-width:760px; margin:0 auto; }
+    .va-faq__eyebrow{
+      display:block; text-align:center;
+      font-size:.72rem; letter-spacing:.28em; text-transform:uppercase;
+      color:var(--va-gold); font-weight:700; margin:0 0 .9rem;
+    }
+    .va-faq__title{
+      font-family:'Playfair Display',Georgia,serif;
+      font-weight:600; color:var(--va-navy);
+      text-align:center; line-height:1.1;
+      font-size:clamp(1.9rem,4.5vw,2.7rem);
+      margin:0 0 1rem;
+    }
+    .va-faq__rule{
+      width:54px; height:2px; background:var(--va-terracotta);
+      border:0; margin:0 auto clamp(2rem,4vw,2.75rem);
+    }
+    .va-faq__item{ border-top:1px solid rgba(191,160,125,.45); }
+    .va-faq__item:last-child{ border-bottom:1px solid rgba(191,160,125,.45); }
+    .va-faq__q{
+      list-style:none; cursor:pointer;
+      display:flex; align-items:center; justify-content:space-between; gap:1.25rem;
+      padding:1.25rem .25rem;
+      font-family:'Playfair Display',Georgia,serif;
+      font-size:clamp(1.05rem,2.4vw,1.2rem); font-weight:500;
+      color:var(--va-navy);
+    }
+    .va-faq__q::-webkit-details-marker{ display:none; }
+    .va-faq__q::after{
+      content:"+"; flex:0 0 auto;
+      font-family:'Lato',sans-serif; font-weight:400;
+      font-size:1.5rem; line-height:1; color:var(--va-terracotta);
+      transition:transform .25s ease;
+    }
+    .va-faq__item[open] .va-faq__q::after{ content:"\2013"; }
+    .va-faq__q:focus-visible{ outline:2px solid var(--va-terracotta); outline-offset:3px; border-radius:2px; }
+    .va-faq__a{
+      padding:0 .25rem 1.4rem; max-width:64ch;
+      font-size:1rem; line-height:1.75; color:var(--va-ink);
+    }
+    .va-faq__a p{ margin:0; }
+    @media (prefers-reduced-motion:reduce){
+      .va-faq__q::after{ transition:none; }
+    }
+  </style>
+
+  <div class="va-faq__inner">
+    <span class="va-faq__eyebrow">Villa Adela · Santiago de la Ribera</span>
+    <h2 class="va-faq__title" id="va-faq-title">Frequently Asked Questions</h2>
+    <hr class="va-faq__rule" aria-hidden="true">
+
+    <details class="va-faq__item">
+      <summary class="va-faq__q">How many guests does Villa Adela accommodate?</summary>
+      <div class="va-faq__a"><p>Villa Adela comfortably accommodates up to eight guests across four bedrooms, each with its own en-suite bathroom. In keeping with the villa's tourist licence, occupancy is limited to a maximum of eight — we are unable to accommodate additional guests or extra beds in the living areas. This keeps every stay as comfortable and effortless as a villa should be.</p></div>
+    </details>
+
+    <details class="va-faq__item">
+      <summary class="va-faq__q">Is the villa suitable for a winter stay?</summary>
+      <div class="va-faq__a"><p>Yes. Every room has climate control, and the region enjoys mild winters with more than 300 days of sunshine a year, making it one of the most pleasant places in Europe to spend the colder months.</p></div>
+    </details>
+
+    <details class="va-faq__item">
+      <summary class="va-faq__q">Is the swimming pool heated?</summary>
+      <div class="va-faq__a"><p>The swimming pool is unheated as standard. Pool heating can be arranged as a paid extra, booked and confirmed in advance — ideal for longer winter stays. Both jacuzzis are heated and included in every booking. Optional extras apply only when confirmed in writing on your booking and are not part of the standard rate.</p></div>
+    </details>
+
+    <details class="va-faq__item">
+      <summary class="va-faq__q">Which golf courses are nearby?</summary>
+      <div class="va-faq__a"><p>You are within easy reach of several of the region's finest courses, including Roda Golf in San Javier, Mar Menor Golf Resort and La Torre Golf Resort in Torre-Pacheco (both Jack Nicklaus designs), La Serena Golf by the Mar Menor, and the renowned La Manga Club a short drive south.</p></div>
+    </details>
+
+    <details class="va-faq__item">
+      <summary class="va-faq__q">Can I work remotely from the villa?</summary>
+      <div class="va-faq__a"><p>Absolutely. High-speed Wi-Fi runs throughout the villa, with generous indoor and outdoor spaces to set up comfortably — from the open-plan living area to the rooftop terrace.</p></div>
+    </details>
+
+    <details class="va-faq__item">
+      <summary class="va-faq__q">Do you offer monthly or long-stay rates?</summary>
+      <div class="va-faq__a"><p>Yes. From November to March we welcome stays of 28 nights or more at preferential monthly rates, with electricity billed separately. It is an ideal arrangement for overwinterers and remote workers seeking a calm base for the season.</p></div>
+    </details>
+
+    <details class="va-faq__item">
+      <summary class="va-faq__q">What is the minimum stay?</summary>
+      <div class="va-faq__a"><p>During the low season the minimum stay is three nights, allowing for both short escapes and extended retreats.</p></div>
+    </details>
+
+    <details class="va-faq__item">
+      <summary class="va-faq__q">What is included in your stay?</summary>
+      <div class="va-faq__a"><p>Every stay includes both heated jacuzzis, all linens and towels, a fully equipped kitchen, washing machine and dryer, climate control and Wi-Fi throughout. Pool heating is available as an optional paid extra, arranged in advance.</p></div>
+    </details>
+
+    <details class="va-faq__item">
+      <summary class="va-faq__q">Is a security deposit required?</summary>
+      <div class="va-faq__a"><p>Yes — a refundable security deposit applies, handled securely through Swikly. Your card is held rather than charged, and the hold is released after departure provided there is no damage.</p></div>
+    </details>
+
+    <details class="va-faq__item">
+      <summary class="va-faq__q">What is your cancellation policy?</summary>
+      <div class="va-faq__a"><p>A 30% deposit is required at the time of booking and is non-refundable. The remaining balance is due 30 days before arrival, or 60 days before arrival for stays of 28 nights or more. Cancellations made before the balance is due forfeit only the deposit; cancellations afterwards, as well as no-shows and early departures, are non-refundable. One free date change is possible when requested at least 30 days in advance, subject to availability and any difference in rate. We recommend arranging travel insurance for added peace of mind.</p></div>
+    </details>
+
+    <details class="va-faq__item">
+      <summary class="va-faq__q">Are pets allowed?</summary>
+      <div class="va-faq__a"><p>We do not accept pets, in order to maintain the villa's pristine condition for every guest.</p></div>
+    </details>
+
+    <details class="va-faq__item">
+      <summary class="va-faq__q">What are the check-in and check-out arrangements?</summary>
+      <div class="va-faq__a"><p>Check-in is between 15:00 and 16:00. We kindly ask guests to message us via WhatsApp when approaching the property so we can welcome you personally.</p></div>
+    </details>
+
+    <details class="va-faq__item">
+      <summary class="va-faq__q">How do I get there?</summary>
+      <div class="va-faq__a"><p>Villa Adela lies around 800 m from the beach. Alicante-Elche Airport (ALC) is roughly an hour away (88 km), and Región de Murcia Airport (RMU) is about 30 minutes by car.</p></div>
+    </details>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many guests does Villa Adela accommodate?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Villa Adela comfortably accommodates up to eight guests across four bedrooms, each with its own en-suite bathroom. In keeping with the villa's tourist licence, occupancy is limited to a maximum of eight — we are unable to accommodate additional guests or extra beds in the living areas. This keeps every stay as comfortable and effortless as a villa should be." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the villa suitable for a winter stay?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every room has climate control, and the region enjoys mild winters with more than 300 days of sunshine a year, making it one of the most pleasant places in Europe to spend the colder months." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the swimming pool heated?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The swimming pool is unheated as standard. Pool heating can be arranged as a paid extra, booked and confirmed in advance — ideal for longer winter stays. Both jacuzzis are heated and included in every booking. Optional extras apply only when confirmed in writing on your booking and are not part of the standard rate." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which golf courses are nearby?",
+      "acceptedAnswer": { "@type": "Answer", "text": "You are within easy reach of several of the region's finest courses, including Roda Golf in San Javier, Mar Menor Golf Resort and La Torre Golf Resort in Torre-Pacheco (both Jack Nicklaus designs), La Serena Golf by the Mar Menor, and the renowned La Manga Club a short drive south." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I work remotely from the villa?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. High-speed Wi-Fi runs throughout the villa, with generous indoor and outdoor spaces to set up comfortably — from the open-plan living area to the rooftop terrace." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer monthly or long-stay rates?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. From November to March we welcome stays of 28 nights or more at preferential monthly rates, with electricity billed separately. It is an ideal arrangement for overwinterers and remote workers seeking a calm base for the season." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum stay?",
+      "acceptedAnswer": { "@type": "Answer", "text": "During the low season the minimum stay is three nights, allowing for both short escapes and extended retreats." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is included in your stay?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Every stay includes both heated jacuzzis, all linens and towels, a fully equipped kitchen, washing machine and dryer, climate control and Wi-Fi throughout. Pool heating is available as an optional paid extra, arranged in advance." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a security deposit required?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — a refundable security deposit applies, handled securely through Swikly. Your card is held rather than charged, and the hold is released after departure provided there is no damage." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is your cancellation policy?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A 30% deposit is required at the time of booking and is non-refundable. The remaining balance is due 30 days before arrival, or 60 days before arrival for stays of 28 nights or more. Cancellations made before the balance is due forfeit only the deposit; cancellations afterwards, as well as no-shows and early departures, are non-refundable. One free date change is possible when requested at least 30 days in advance, subject to availability and any difference in rate. We recommend arranging travel insurance for added peace of mind." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are pets allowed?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We do not accept pets, in order to maintain the villa's pristine condition for every guest." }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the check-in and check-out arrangements?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Check-in is between 15:00 and 16:00. We kindly ask guests to message us via WhatsApp when approaching the property so we can welcome you personally." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get there?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Villa Adela lies around 800 m from the beach. Alicante-Elche Airport (ALC) is roughly an hour away (88 km), and Región de Murcia Airport (RMU) is about 30 minutes by car." }
+    }
+  ]
+}
+</script>
 </body>
 </html>
