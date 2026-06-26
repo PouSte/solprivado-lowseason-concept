@@ -5,11 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>Winter in Murcia — Escape the Cold | Villa Adela by Sol Privado</title>
-<meta name="description" content="Escape the cold this winter at Villa Adela, a luxury villa on the Costa Cálida near Mar Menor. Golf escapes, long winter-sun stays and workations from November to March. Heated pool, jacuzzis, fast fibre and 300 days of sun." />
-<meta property="og:title" content="Winter in Murcia — Escape the Cold | Villa Adela" />
-<meta property="og:description" content="Luxury winter-sun villa on the Costa Cálida. Golf escapes, long stays and workations near Mar Menor, Murcia." />
-<meta property="og:type" content="website" />
+<meta name="description" content="Escape the cold this winter at Villa Adela, a luxury villa on the Costa Cálida near the Mar Menor. Golf escapes, long winter-sun stays and workations from November to March, with heated jacuzzis, a private pool, 600 Mbps fibre and 300 days of sun." />
+
+<!-- DEV NOTE: this concept is hosted on GitHub Pages. On the live solprivado.com build:
+     1) REMOVE the noindex robots tag below so Google can index the page and the FAQ schema.
+     2) Update og:url, og:image and the canonical link to the live https://solprivado.com/winter URLs.
+     3) Add a real favicon (none referenced yet). -->
 <meta name="robots" content="noindex" />
+<link rel="canonical" href="https://solprivado.com/winter" />
+<meta name="theme-color" content="#1E3A52" />
+
+<meta property="og:title" content="Winter in Murcia — Escape the Cold | Villa Adela" />
+<meta property="og:description" content="Luxury winter-sun villa on the Costa Cálida. Golf escapes, long stays and workations near the Mar Menor, Murcia." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://pouste.github.io/solprivado-lowseason-concept/" />
+<meta property="og:image" content="https://pouste.github.io/solprivado-lowseason-concept/hero.jpeg" />
+<meta property="og:image:alt" content="Villa Adela at dusk with an illuminated private pool, Santiago de la Ribera" />
+<meta name="twitter:card" content="summary_large_image" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,7 +31,7 @@
   :root{
     --navy:#1E3A52; --navy-deep:#16293A;
     --terracotta:#C0561E; --terracotta-dk:#A84814;
-    --gold:#BFA07D; --cream:#FBE7DB; --cream-soft:#FDF2EA;
+    --gold:#BFA07D; --gold-ink:#7D5F33; --cream:#FBE7DB; --cream-soft:#FDF2EA;
     --paper:#FFFBF7; --ink:#26333F; --muted:#5C6770;
     --hero-image: url('hero.jpeg');
   }
@@ -78,7 +90,7 @@
   .feature .ft-body{padding:44px}
   .feature .tag{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--terracotta)}
   .feature h3{font-size:2rem;margin-top:8px}
-  .feature .season{font-size:.85rem;color:var(--gold);font-weight:700;margin-top:6px;display:block}
+  .feature .season{font-size:.85rem;color:var(--gold-ink);font-weight:700;margin-top:6px;display:block}
   .feature p{margin-top:16px}
   .feature ul{list-style:none;margin-top:18px}
   .feature li,.pkg li{position:relative;padding:7px 0 7px 24px;font-size:.96rem;color:var(--ink);font-weight:300}
@@ -92,7 +104,7 @@
   .pkg .pkg-body{padding:30px 32px 36px;display:flex;flex-direction:column}
   .pkg .tag{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--terracotta)}
   .pkg h3{font-size:1.5rem;margin-top:10px}
-  .pkg .season{font-size:.85rem;color:var(--gold);font-weight:700;margin-top:6px;display:block}
+  .pkg .season{font-size:.85rem;color:var(--gold-ink);font-weight:700;margin-top:6px;display:block}
   .pkg .anchor{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--navy);margin-top:14px;font-weight:700}
   .pkg .anchor span{font-family:'Lato';font-size:.8rem;color:var(--muted);font-weight:400}
   .pkg p{font-size:.97rem;margin-top:14px}
@@ -164,11 +176,13 @@
     </div>
     <div class="hero-bar">
       <ul>
-        <li>Private pool</li><li>2 heated jacuzzis</li><li>Fast fibre wi-fi</li>
+        <li>Private pool</li><li>2 heated jacuzzis</li><li>600 Mbps fibre wi-fi</li>
         <li>Sleeps 8 · 4 bedrooms</li><li>88 km from Alicante airport</li>
       </ul>
     </div>
   </header>
+
+  <main>
 
   <!-- WHY WINTER -->
   <section class="why">
@@ -184,7 +198,7 @@
           <div class="stat"><span class="num">800 m</span><span class="lab">from the beach</span></div>
         </div>
       </div>
-      <div class="media reveal"><img src="rooftop-sun.jpeg" alt="Sunlit rooftop terrace with pergola at Villa Adela, Murcia" /></div>
+      <div class="media reveal"><img src="rooftop-sun.jpeg" alt="Sunlit rooftop terrace with pergola at Villa Adela, Murcia" width="1200" height="900" loading="lazy" decoding="async" /></div>
     </div>
   </section>
 
@@ -200,7 +214,7 @@
 
       <!-- GOLF leads -->
       <div class="feature reveal">
-        <div class="ft-media"><img src="golf.jpeg" alt="Golfer teeing off on a sunny course near the Mar Menor, Murcia" /></div>
+        <div class="ft-media"><img src="golf.jpeg" alt="Golfer teeing off on a sunny course near the Mar Menor, Murcia" width="1200" height="800" loading="lazy" decoding="async" /></div>
         <div class="ft-body">
           <span class="tag">Golf Escape · most popular</span>
           <h3>Tee off in the sun</h3>
@@ -217,7 +231,7 @@
 
       <div class="pkg-grid">
         <div class="pkg reveal">
-          <div class="pkg-media"><img src="interior.jpeg" alt="Bright open-plan living room and kitchen at Villa Adela" /></div>
+          <div class="pkg-media"><img src="interior.jpeg" alt="Bright open-plan living room and kitchen at Villa Adela" width="1600" height="1000" loading="lazy" decoding="async" /></div>
           <div class="pkg-body">
             <span class="tag">Winter Sun Monthly Stay</span>
             <h3>Trade winter for warmth</h3>
@@ -233,15 +247,15 @@
           </div>
         </div>
         <div class="pkg reveal">
-          <div class="pkg-media"><img src="workation.jpeg" alt="Rooftop terrace with dining table, ideal for a workation in Murcia" /></div>
+          <div class="pkg-media"><img src="workation.jpeg" alt="Rooftop terrace with dining table, ideal for a workation in Murcia" width="1600" height="1000" loading="lazy" decoding="async" /></div>
           <div class="pkg-body">
             <span class="tag">Workation</span>
             <h3>Work where it's warm</h3>
             <span class="season">October – March</span>
             <div class="anchor">weekly &amp; monthly rates</div>
-            <p>For founders, consultants and remote teams who'd rather log in from a sunlit terrace. Fast fibre, quiet streets, everything in place to stay productive.</p>
+            <p>For founders, consultants and remote teams who'd rather log in from a sunlit terrace. 600 Mbps fibre, quiet streets, everything in place to stay productive.</p>
             <ul>
-              <li>Fast fibre internet throughout</li>
+              <li>600 Mbps fibre internet throughout</li>
               <li>Private pool &amp; rooftop terrace</li>
               <li>Quiet residential setting</li>
               <li>Ideal for 1–8 people</li>
@@ -278,7 +292,7 @@
   <!-- INCLUDED -->
   <section class="included">
     <div class="wrap inc-wrap">
-      <div class="media reveal"><img src="pool-night.jpeg" alt="Villa Adela at night with illuminated pool and jacuzzi" /></div>
+      <div class="media reveal"><img src="pool-night.jpeg" alt="Villa Adela at night with illuminated pool and jacuzzi" width="1200" height="900" loading="lazy" decoding="async" /></div>
       <div class="reveal">
         <span class="eyebrow">Comfort, all winter</span>
         <h2>Everything ready when you arrive</h2>
@@ -290,7 +304,7 @@
           <div class="inc"><span class="dot"></span><span>4 en-suite bedrooms, sleeps 8</span></div>
           <div class="inc"><span class="dot"></span><span>Designer kitchen</span></div>
           <div class="inc"><span class="dot"></span><span>70 m² rooftop terrace</span></div>
-          <div class="inc"><span class="dot"></span><span>Fast fibre wi-fi</span></div>
+          <div class="inc"><span class="dot"></span><span>600 Mbps fibre wi-fi</span></div>
           <div class="inc"><span class="dot"></span><span>Washer &amp; dryer</span></div>
           <div class="inc"><span class="dot"></span><span>Smart TVs &amp; Bluetooth sound</span></div>
           <div class="inc"><span class="dot"></span><span>Private parking</span></div>
@@ -314,7 +328,7 @@
           <li><b>Daily life</b><span>Supermarkets, pharmacies &amp; restaurants nearby</span></li>
         </ul>
       </div>
-      <div class="media reveal"><img src="area.jpeg" alt="Mar Menor waterfront and promenade near San Javier, Murcia" /></div>
+      <div class="media reveal"><img src="area.jpeg" alt="Mar Menor waterfront and promenade near San Javier, Murcia" width="1200" height="900" loading="lazy" decoding="async" /></div>
     </div>
   </section>
 
@@ -332,10 +346,6 @@
     </div>
   </section>
 
-  <script>
-    const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14});
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-  </script>
   <section class="va-faq" aria-labelledby="va-faq-title">
   <style>
     .va-faq{
@@ -353,7 +363,7 @@
     .va-faq__eyebrow{
       display:block; text-align:center;
       font-size:.72rem; letter-spacing:.28em; text-transform:uppercase;
-      color:var(--va-gold); font-weight:700; margin:0 0 .9rem;
+      color:#7D5F33; font-weight:700; margin:0 0 .9rem;
     }
     .va-faq__title{
       font-family:'Playfair Display',Georgia,serif;
@@ -422,7 +432,7 @@
 
     <details class="va-faq__item">
       <summary class="va-faq__q">Can I work remotely from the villa?</summary>
-      <div class="va-faq__a"><p>Absolutely. High-speed Wi-Fi runs throughout the villa, with generous indoor and outdoor spaces to set up comfortably — from the open-plan living area to the rooftop terrace.</p></div>
+      <div class="va-faq__a"><p>Absolutely. A 600 Mbps fibre connection runs throughout the villa, with generous indoor and outdoor spaces to set up comfortably — from the open-plan living area to the rooftop terrace.</p></div>
     </details>
 
     <details class="va-faq__item">
@@ -466,6 +476,12 @@
     </details>
   </div>
 </section>
+  </main>
+
+  <script>
+    const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
 
 <script type="application/ld+json">
 {
@@ -495,7 +511,7 @@
     {
       "@type": "Question",
       "name": "Can I work remotely from the villa?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. High-speed Wi-Fi runs throughout the villa, with generous indoor and outdoor spaces to set up comfortably — from the open-plan living area to the rooftop terrace." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. A 600 Mbps fibre connection runs throughout the villa, with generous indoor and outdoor spaces to set up comfortably — from the open-plan living area to the rooftop terrace." }
     },
     {
       "@type": "Question",
